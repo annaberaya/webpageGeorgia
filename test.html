@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    /* Общие стили для всей страницы */
+    body {
+      font-family: 'Montserrat Alternates', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: white;
+    }
+
+    /* Стили для заголовка страницы */
+    header {
+      background-color: #D9732C;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    /* Стили для меню навигации */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      background-color: #422009;
+      padding: 0.5em;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5em 1em;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: #333;
+    }
+
+    /* Стили для основного содержания страницы */
+    main {
+
+      padding: 2em;
+      background: linear-gradient(rgba(95, 44, 8, 0.95), rgba(95, 44, 8, 0.8)), url('tbs.jpg');
+      background-size: cover;
+      display: flex;
+      font-color: white
+    }
+
+    /* Стили для блоков с картинкой и текстом */
+    .image-text-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2em;
+    }
+
+    .image-text-container:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+
+    .image-text-container img {
+      width: 40%;
+      border-radius: 10px;
+      margin: 0 2em;
+    }
+
+    .image-text-container div {
+      width: 60%;
+    }
+
+    /* Стили для футера страницы */
+     footer {
+        text-align: center;
+        padding: 1em 0;
+        background-color: #5F2C08;
+        color: white;
+     }
+
+     .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+     }
+
+     .footer-image {
+        max-width: 100px; /* Максимальная ширина картинки, можно изменить */
+        height: auto; /* Высота картинки будет изменяться пропорционально ширине */
+     }
+
+     .footer-image.left {
+        margin-right: 1em; /* Отступ справа от левой картинки */
+        padding-left: 20px;
+        padding-right: 20px;
+
+     }
+
+    .footer-image.right {
+        margin-left: 1em; /* Отступ слева от правой картинки */
+        padding-left: 20px;
+        padding-right: 20px;
+     }
+
+    .test-and-result-container {
+        display: flex;
+        color: white
+    }
+
+    .test {
+        flex: 3; /* Элемент займет 3 части пространства внутри flex-контейнера относительно других элементов */
+        color: white
+    }
+
+    .result-section {
+        flex: 1;  /* Элемент займет 1 часть пространства внутри flex-контейнера, элементы .test будут в 3 раза шире, если остальные настройки позволяют */
+        padding-left: 20px;
+        color: white;
+    }
+
+    #wineImage {
+        width: 700px;
+        height: 500px;
+    }
+
+    .active {
+        font-weight: bold;
+    }
+
+</style>
+</head>
+<body>
+<header>
+    <h1> <a href="index.html" style="color: white; text-decoration: none"> Путеводитель по Грузии </a></h1>
+</header>
+<nav>
+    <a href="index.html">Главная</a>
+    <a href="cities.html">Города</a>
+    <a href="tours.html">Туры</a>
+    <a href="recipes.html">Рецепты</a>
+    <a href="test.html" class="active">Тест</a>
+</nav>
+<main>
+    <div class="container">
+        <h1>Какое грузинское вино вам подходит?</h1>
+        <div>
+            <h3>
+                Пройди тест и узнай, какое грузинское вино тебе обязательно стоит попробовать! <br> <br> Начинаем!
+            </h3>
+        </div>
+        <div class="test-and-result-container">
+            <div class="test">
+                <div class="question">
+                    <p style="font-size: 24px">1. Сколько вам лет?</p>
+                    <select id="age" name="age">
+                        <option value="18-29">18-29</option>
+                        <option value="30-39">30-39</option>
+                        <option value="40-49">40-49</option>
+                        <option value="50-59">50-59</option>
+                        <option value="60+">60+</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p style="font-size: 24px">2. Ваш пол:</p>
+                    <input type="radio" id="male" name="gender" value="Мужской">
+                    <label for="male" style="font-size: 20px">Мужской</label>
+                    <input type="radio" id="female" name="gender" value="Женский">
+                    <label for="female" style="font-size: 20px">Женский</label>
+                </div>
+                <div class="question">
+                    <p style="font-size: 24px">3. Вы предпочитаете красное или белое?</p>
+                    <select id="wineColor" name="color">
+                        <option value="Красное">Красное</option>
+                        <option value="Белое">Белое</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p style="font-size: 24px">4. Вы любите крепкое вино?</p>
+                    <select id="wineStrength" name="strength">
+                        <option value="Да">Да</option>
+                        <option value="Нет">Нет</option>
+                    </select>
+                </div>
+                <button id="getResult" onclick="showResult()">Узнать ответ</button>
+            </div>
+            <div class="result-section" id="result" style="display: none;">
+                <h2 id="wineName"></h2>
+                <p id="wineDescription"></p>
+                <img id="wineImage" src="" alt="">
+            </div>
+        </div>
+    </div>
+</main>
+
+  <footer>
+  <div class="footer-content">
+    <a href="map.jpg" target="_blank">
+      <img src="mini_map.png" alt="Левая картинка" class="footer-image left">
+    </a>
+    <div style="text-align: justify">
+      <p>Наши контакты:</p>
+      <ul>
+        <li><a href="https://www.instagram.com" target="_blank" style="color: white;"> Instagram </a></li>
+        <li><a href="https://www.facebook.com" target="_blank" style="color: white;"> Facebook </a></li>
+        <li><a href="https://vk.com" target="_blank" style="color: white;">  Вконтакте </a></li>
+      </ul>
+      <p> +7(901)782-89-20</p>
+    </div>
+    <a href="map.jpg" target="_blank">
+      <img src="mini_map.png" alt="Правая картинка" class="footer-image right">
+    </a>
+  </div>
+</footer>
+
+<script>
+    function showResult() {
+    // Получаем значения из формы
+    var age = document.querySelector('select[name="age"]').value;
+    var gender = document.querySelector('input[name="gender"]:checked').value;
+    var color = document.querySelector('select[name="color"]').value;
+    var strength = document.querySelector('select[name="strength"]').value;
+
+    // Логика для расчета результата теста
+    var wineName, wineDescription, wineImage;
+    if (strength === 'Нет' && color === 'Белое') {
+        wineName = "Киси";
+        wineDescription = "Вино, приготовленное по кахетийским традиционным методам в Квеври. Оно характеризуется  соломным цветом, сильным ароматом и резко выраженными сладкими персиковыми и миндальными тонами. Вино имеет гармоничный, приятный, нежный вкус.";
+        wineImage = "kisi.jpeg";
+    } else if (strength === 'Да' && color === 'Белое') {
+        wineName = "Цинандали";
+        wineDescription = "Цинандали - это изысканное грузинское вино, которое славится своей богатой историей и уникальным характером. Это белое вино производится из сорта винограда Цинандали, который растет в регионе Кахетия, Грузия. Вино Цинандали характеризуется полу-прозрачным желтым цветом и богатым, глубоким вкусом.";
+        wineImage = "tsina.jpeg";
+    } else if (strength === 'Да' && color === 'Красное') {
+        wineName = "Мукузани";
+        wineDescription = "Мукузани - это престижное красное вино, производимое в Грузии. Оно получило свое имя от одноименного села Мукузани, которое славится своими виноградными лозами и традиционным виноделием. Вино имеет глубокий рубиновый цвет, а его ароматы могут варьироваться от интенсивных фруктовых нот, таких как черешня и вишня, до более сложных нюансов специй, дуба и кожи. Вкус этого вина обычно полнотелый, с хорошей структурой и умеренными танинами. Мукузани, как правило, имеет хорошую потенцию для выдержки.";
+        wineImage = "mukuzani.jpeg";
+    } else if (strength === 'Нет' && color === 'Красное') {
+        wineName = "Киндзмараули";
+        wineDescription = "Киндзмараули - это знаменитое грузинское красное вино, производимое в регионе Кахетия. Это вино изготавливается из сорта винограда Саперави, который характеризуется густой кожурой и сочным соком, что придает Киндзмараули свою уникальную интенсивную красную окраску и богатый вкус. Это вино славится своей сладостью, и оно считается полусладким или сладким вином с мягкими танинами и хорошей кислотностью.";
+        wineImage = "kindz.png";
+    } else {
+        wineName = "Ркацители";
+        wineDescription = "Белое полусладкое вино, обладает приятным вкусом и ароматом.";
+        wineImage = "rkatsiteli.jpg";
+    }
+
+    // Отображаем результат
+    document.getElementById('wineName').innerText = wineName;
+    document.getElementById('wineDescription').innerText = wineDescription;
+    document.getElementById('wineImage').src = wineImage;
+    document.getElementById('result').style.display = 'block';
+}
+
+
+</script>
+</body>
+</html>

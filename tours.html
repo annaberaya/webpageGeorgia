@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Туры по Грузии</title>
+    <style>
+    body {
+        font-family: 'Montserrat Alternates', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: white;
+        text-align: justify;
+    }
+
+    header {
+        background-color: #D9732C;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: #422009;
+        padding: 0.5em;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5em 1em;
+    }
+
+    nav a:hover {
+        background-color: #ddd;
+        color: #333;
+    }
+
+    main {
+        padding: 2em;
+        background: linear-gradient(rgba(95, 44, 8, 0.95), rgba(95, 44, 8, 0.8)), url('tbs.jpg');
+        background-size: cover;
+    }
+
+    .image-text-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2em;
+        padding-right: 20px;
+    }
+
+    .image-text-container:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .image-text-container img {
+        width: 40%;
+        border-radius: 10px;
+        margin: 0 2em;
+        height: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .image-text-container div {
+        width: 60%;
+    }
+
+    /* Стили для футера страницы */
+    footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #5F2C08;
+    color: white;
+    text-align: justify
+    }
+
+    .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .footer-image {
+    max-width: 100px; /* Максимальная ширина картинки, можно изменить */
+    height: auto; /* Высота картинки будет изменяться пропорционально ширине */
+    }
+
+    .footer-image.left {
+    margin-right: 1em; /* Отступ справа от левой картинки */
+    padding-left: 20px;
+    padding-right: 20px;
+
+    }
+
+    .footer-image.right {
+    margin-left: 1em; /* Отступ слева от правой картинки */
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
+    /* Стили для контейнера формы заявки */
+    .apply-container {
+        display: flex; /* Использование flexbox для выравнивания элементов */
+        align-items: flex-start; /* Выравнивание элементов по верхнему краю */
+        justify-content: space-between; /* Распределение элементов с равными промежутками */
+        margin-top: 2em; /* Отступ сверху контейнера */
+    }
+
+    .apply-form {
+        display: flex;
+        flex-direction: column; /* Элементы формы выстраиваются в столбец */
+        background-color: #E5D3B3;
+        border-radius: 10px;
+        padding: 1em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .apply-form input,
+    .apply-form select,
+    .apply-form button {
+        margin: 0.5em; /* Внешний отступ для элементов формы */
+        padding: 0.5em; /* Внутренний отступ для элементов формы */
+        width: 90%;
+    }
+
+    .apply-form input[type="date"] {
+        cursor: pointer; /* Изменение курсора при наведении на элемент выбора даты */
+    }
+
+    .application-info {
+        background-color: #E5D3B3;
+        border-radius: 10px;
+        padding: 1em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        min-height: 380px;
+        width: 20%;
+    }
+
+    .active {
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> <a href="index.html" style="color: white; text-decoration: none"> Путеводитель по Грузии </a></h1>
+    </header>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="cities.html">Города</a>
+        <a href="tours.html" class="active">Туры</a>
+        <a href="recipes.html">Рецепты</a>
+        <a href="test.html">Тест</a>
+    </nav>
+    <main>
+        <p> Мы предлагаем Вам туры в Сванетию, <a href="tours.html#imageLoc" style="color: white;"> в Казбеги</a> и <a href="tours.html#imageLoc1" style="color: white;">в Кахетию!</a></p>
+        <div class="image-text-container">
+            <div>
+                <h2>В Сванетию</h2>
+                <p>
+                    Сванетия, невероятно красивый регион в Грузии, представляет собой идеальное
+                    место для путешествия в историческую и природную зону. <br> <br> <b>Название тура: </b>
+                    "Загадочная Сванетия: Путешествие в сердце горных вершин Грузии" <br> <br>
+                    <b> Продолжительность: </b> 6 дней  <br> <br> <b> День 1: </b> Тбилиси <br> Ваше путешествие начнется
+                    в столице Грузии, Тбилиси. Вы посетите старый город, насладитесь традиционной
+                    грузинской кухней и познакомитесь с местной культурой. <br> <br> <b> День 2: </b> Местия <br>
+                    Передвигаясь на северо-запад, вы прибудете в город Местия, входящий в Сванетию.
+                    Этот регион славится своей потрясающей природой и характерными башнями Сванской
+                    архитектуры. <br> <br> <b> День 3-4: </b> Трекинг в горах <br> Вы отправитесь в пеший поход по горам Сванетии,
+                    где вас ожидают невероятные виды, горные озера и встречи с местными пастухами.
+                    Ночевать вы будете в горных хижинах. <br> <br> <b> День 5: </b> Узнавайте о местной культуре <br>
+                    Посетите музей Сванской истории и культуры, а также научитесь готовить традиционное
+                    блюдо - хачапури. <br> <br> <b> День 6: </b> Возвращение в Тбилиси <br> Вернувшись в Тбилиси,
+                    вы закончите свое путешествие, но с воспоминаниями и впечатлениями, которые
+                    останутся с вами навсегда.</p>
+            </div>
+            <img src="svaneti_page3.jpeg" alt="Сванетия">
+        </div>
+
+
+
+        <div class="image-text-container">
+            <div>
+                <a name="imageLoc"></a>
+                <h2>В Казбеги</h2>
+                <p>
+                <b> Название тура: </b> "Волшебство Казбеги: Трехдневное приключение в горной Грузии" <br> <br>
+                    <b> Продолжительность: </b> 3 дня <br> <br> <b> День 1: </b> Путешествие в Казбеги <br> Ваше трехдневное
+                    приключение начнется с переезда из Тбилиси в Казбеги. По пути вы посетите <a href="https://ru.wikipedia.org/wiki/Ананури" style="color: white;">Ананури</a>,
+                    знаменитую крепость на берегу озера Жинвали, и сделаете остановку в Гудаури,
+                    где можно попробовать горнолыжные склоны (зимой). Вечером вы прибудете в Казбеги,
+                    и вас ждет незабываемый вид на гору Казбек, одну из высочайших вершин Грузии.
+                    <br> <br> <b> День 2: </b> Поход к Гергетской тринадцатой церкви <br> Во второй день вы
+                    отправитесь в увлекательный пеший поход к Гергетской тринадцатой церкви,
+                    исключительно расположенной среди гор. Ваш маршрут пройдет через горные долины, где
+                    вы сможете насладиться панорамными видами и сфотографировать потрясающие пейзажи.
+                    <br> <br> <b> День 3: </b> Казбегский монастырь и возвращение <br> На третий день вы посетите
+                    Светицховели и Казбегский монастырь, искупитесь в теплых источниках и насладитесь
+                    чистым горным воздухом. После обеда, вы вернетесь в Тбилиси, завершая свое удивительное
+                    путешествие в Казбеги.</p>
+            </div>
+            <img src="kazbegi_page3.jpeg" alt="Казбеги">
+        </div>
+
+        <div class="image-text-container">
+            <div>
+                <a name="imageLoc1"></a>
+                <h2>В Кахетию</h2>
+                <p>
+                    <b> Название тура: </b> "Винная Кахетия: Двухдневное путешествие в винодельческий рай Грузии"
+                    <br> <br> <b> Продолжительность: </b> 2 дня <br> <br> <b> День 1: </b> Исследование винодельческой Кахетии
+                    <br> Ваше приключение начнется с утреннего выезда из Тбилиси в Кахетию,
+                    самый известный винодельческий регион Грузии. Первая остановка - город Сигнаги,
+                    окруженный стенами средневековой крепости. Вы посетите знаменитый Чавчавадзе
+                    и дом-музей Александра Чавчавадзе, где вы сможете попробовать разнообразные сорта
+                    грузинского вина. После этого вы посетите одну из многих винодельческих ферм в
+                    регионе, где сможете насладиться дегустацией местных вин и научиться, как
+                    грузины варят вино в традиционных квеври. <br> <br> <b> День 2: </b> Культурные и природные
+                    богатства <br> Во второй день вы посетите город Кахетию, где находится одна
+                    из старейших церквей Грузии - Алаверди. Затем вы отправитесь в Кварели,
+                    где у вас будет возможность побывать на винодельческой ферме и продегустировать
+                    местные вина и коньяк. После обеда вы отправитесь в Телави и посетите местный рынок,
+                    где сможете приобрести местные продукты и сувениры. Завершите ваше путешествие в Кахетию
+                    вечерней поездкой обратно в Тбилиси.
+                </p>
+            </div>
+            <img src="kakheti_page3.jpeg" alt="Кахетия">
+        </div>
+
+        <div class="apply-container">
+            <h3> Оставьте заявку и мы вам перезвоним! </h3>
+            <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+                <p>Для поисковика:<input type="Text"  name="q" value="search"></p>
+                <p>ФИО: <input type="Text" name="last_name" size=20></p>
+                <p>Возраст: <input type="Number" name="age" size=20 value="0"></p>
+                <p>Откуда вы?
+                    <input type="Radio" name="place" value="Russia">Росиия
+                    <input type="Radio" name="place" value="Georgia">Грузия
+                    <input type="Radio" name="place" value="Other">Другое
+                </p>
+
+                <p>Какой тур вас интересует?
+                    <input type="Checkbox" name="trip"  value="Svan">В Сванетию
+                    <input type="Checkbox"  name="trip"   value="Kakh">В Кахетию
+                    <input type="Checkbox" name="trip" value="Kazb">В Казбеги
+                </p>
+
+                <p>Какой команией плаируете путешествовать?
+                    <select name="amountpfpeople">
+                        <OPTION value="Один/Одна">Один/Одна</OPTION>
+                        <OPTION value="2-5 человек">2-5 человек</OPTION>
+                        <OPTION value="Более 5 человек">Более 5 человек</OPTION>
+                    </select>
+                </p>
+
+                <p> Дополнительная информация:
+                    <br>
+                    <TEXTAREA cols=80 name="textarea" rows=4></TEXTAREA>
+                </p>
+
+                <p>Дата путешествия: <input type="date" name="user_date"></p>
+                <p>Пароль: <input type="Password" name="password" size=9></p>
+                <!--Все нижерасположенные фрагменты перемещать нельзя, редактировать можно-->
+
+                <input type="hidden" name="function"  value="page">
+                <input type="hidden" name="page_id"  value="3">
+                <p>
+                    <input type="Reset"  name="Reset"  value="Обновить">
+                    <input type="Submit" name="submit"  value="Отправить">
+                </p>
+
+            </form>
+            </div>
+        </div>
+    </main>
+  <footer>
+  <div class="footer-content">
+    <a href="map.jpg" target="_blank">
+      <img src="mini_map.png" alt="Левая картинка" class="footer-image left">
+    </a>
+    <div>
+      <p>Наши контакты:</p>
+      <ul>
+        <li><a href="https://www.instagram.com" target="_blank" style="color: white;"> Instagram </a></li>
+        <li><a href="https://www.facebook.com" target="_blank" style="color: white;"> Facebook </a></li>
+        <li><a href="https://vk.com" target="_blank" style="color: white;">  Вконтакте </a></li>
+      </ul>
+      <p> +7(901)782-89-20</p>
+    </div>
+    <a href="map.jpg" target="_blank">
+      <img src="mini_map.png" alt="Правая картинка" class="footer-image right">
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
+
